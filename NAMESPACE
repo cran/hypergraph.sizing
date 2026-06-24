@@ -1,0 +1,8 @@
+useDynLib("hypergraph.sizing",.registration=TRUE)
+export(count.indep.hyper)
+export(count.vc.hyper)
+export(sizing.hyper)
+export(complete.hypergraph)
+export(make.test)
+export(get.p.vals.hypergraph)
+export(get.threshold.hyper)
