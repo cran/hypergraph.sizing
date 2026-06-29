@@ -321,6 +321,9 @@ double* hypergraph::countindep(unsigned int N){
   //Counts the number of independent sets, using an importance
   //sampling approach based on randomly constructing an independent
   //set.
+  if(ne==0){
+    return(NULL);
+  };
   double* ans=new double[ne];
   double* count=new double[ne];
   double* factor=new double[ne]; // factor is the weight that is
@@ -345,10 +348,11 @@ double* hypergraph::countindep(unsigned int N){
     for(;count[sge]<N;count[sge]++){
       //initialise used and order variables
       double fact=1;
-      for(unsigned int j=sge;j<ne;j++){
+      for(unsigned int j=sge;j+1<ne;j++){
 	*(ans+j)+=fact;
 	fact*=factor[j+1]; //empty set is independent.
       };
+      *(ans+ne-1)+=fact;      
       for(unsigned int i=0;i<nv;i++){
 	used[i]=0;
       };
@@ -410,10 +414,11 @@ double* hypergraph::countindep(unsigned int N){
 	  };
 	};
 	fact=1;
-	for(unsigned int j=sge;j<ind_limit;j++){
+	for(unsigned int j=sge;j+1<ind_limit;j++){
 	  *(ans+j)+=w*fact;
 	  fact*=factor[j+1];
 	};
+	*(ans+ind_limit-1)+=w*fact;	
       };
     };
     *(ans+sge)/=count[sge];

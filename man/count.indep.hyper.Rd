@@ -65,7 +65,7 @@ Toby Kenney
 set.seed(1)
 edge.orders<-rpois(15,1.6)+1
 
-H<-list("vertices"=10,lapply(edge.orders,function(s){sample(seq_len(10),s)}))
+H<-list("vertices"=10,"edges"=lapply(edge.orders,function(s){sample(seq_len(10),s)}))
 
 ind.set<-count.indep.hyper(H)
 }

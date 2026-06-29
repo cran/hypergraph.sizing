@@ -1,11 +1,11 @@
-7af7506254498e2a41fc44c2ce56d4df *DESCRIPTION
+e25969947e4fd9b981fe37182906ddaa *DESCRIPTION
 e166fdaa8457b171e94f314091815aaf *NAMESPACE
-5b526ddfa265ded310188ead6cca105c *R/CountVC_hyper.R
+d9ac5fbc3e2586b072f3e28fff14b667 *R/CountVC_hyper.R
 410ab31d39d5a40549a36995a6a2121c *R/Get_p_values.R
 a533d02f7fe305ed22f3f7375b18120a *man/complete.hypergraph.Rd
-842b140dd233bf8e3b8bee12a1e7702a *man/count.indep.hyper.Rd
+1ece0f1bf38e18c54cccc293ef315715 *man/count.indep.hyper.Rd
 f2ad284fd8dc326f9577e9b9f1351e8d *man/get.p.vals.hypergraph.Rd
 aade8acad80d04d8a4cecb0b27881861 *man/get.threshold.hyper.Rd
 a9ddc0160c604dd5f816e1dc4a5a5705 *man/make.test.Rd
-78407f7af5dd7333f4bd5b125717abf5 *man/sizing.hyper.Rd
-29f0e03d10950cfde9edd167a160b783 *src/Hypergraph2.cpp
+3b200ee499fb9cb9ef8920a55e377796 *man/sizing.hyper.Rd
+e1ac5a60b63cc1ba590e81e042516b9b *src/Hypergraph2.cpp

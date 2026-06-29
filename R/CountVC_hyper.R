@@ -4,6 +4,9 @@ count.indep.hyper<-function(H,samp.size=1000){
 ### The first element gives the number of vertices.
 ### The second element is a list of edges.
 ### Each edge consist of a list of vertex numbers.
+    if(is.null(H$vertices)|is.null(H$edges)){
+        stop("Hypergraph is badly formatted.")
+    }
     nv<-as.integer(H$vertices)
     nsamp<-as.integer(samp.size)
     ne<-as.integer(length(H$edges))
@@ -19,6 +22,9 @@ count.vc.hyper<-count.indep.hyper
 ### there are the same number of vertex covers and independent sets.
 
 sizing.hyper<-function(H,samp.size=1000){
+    if(is.null(H$vertices)|is.null(H$edges)){
+        stop("Hypergraph is badly formatted.")
+    }
     sample.size<-samp.size
     Hyp<-H
     sizing<-function(ord){
